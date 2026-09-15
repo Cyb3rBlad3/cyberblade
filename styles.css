@@ -113,25 +113,22 @@ body {
 }
 
 .page-shell {
-  opacity: 0;
-  transform: translateY(40px);
-  transition:
-    opacity 0.7s ease-out,
-    transform 0.7s ease-out;
-}
-
-.page-shell-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* 滚动上滑进入动画基础样式（模仿 howardzhangdqs.github.io 的效果） */
 .reveal {
-  opacity: 0;
-  transform: translateY(40px);
+  opacity: 1;
+  transform: none;
   transition:
     opacity 0.6s ease-out,
     transform 0.6s ease-out;
+}
+
+.reveal.reveal-pending {
+  opacity: 0;
+  transform: translateY(40px);
 }
 
 .reveal-active {
